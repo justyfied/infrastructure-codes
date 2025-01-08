@@ -31,8 +31,11 @@ resource "aws_key_pair" "ec2_key" {
 }
 
 resource "aws_launch_template" "ec2_launch_template" {
-  name_prefix = "ec2-launch-template"
-  image_id     = "ami-0c55b159cbfafe1f0"  # Replace with your own AMI
+  name          = var.launch_template_name
+  image_id     = "ami-0c55b159cbfafe1f0"
+  iam_instance_profile {
+    name = "test"
+  }
   instance_type = "t2.micro"
   key_name      = aws_key_pair.ec2_key.key_name
 
