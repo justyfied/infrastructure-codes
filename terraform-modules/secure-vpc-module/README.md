@@ -20,4 +20,4 @@ module "secure_vpc" {
 ```
 
 
-![vpc](image.png)
+![vpc architectural diagram](../../docs/images/image.png)
