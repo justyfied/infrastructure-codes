@@ -17,5 +17,7 @@ module "secure_vpc" {
    vpc_cidr   = "10.0.0.0/16"
    name_prefix = "prod"
 }
+```
+
 
 ![vpc](image.png)
